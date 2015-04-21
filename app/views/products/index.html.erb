@@ -2,5 +2,5 @@
 <%= link_to "New Product", "/products/new" %>
 
 <% @products.each do |product| %>
-  <p><%= link_to product.name, "products/#{product.id}" %>  $<%= product.price_in_cents/100 %>.<%= product.price_in_cents%100<10 ? "0".concat((product.price_in_cents%100).to_s) : product.price_in_cents%100 %><br></p>
+  <p><%= link_to product.name, "products/#{product.id}" %>  $<%= product.formatted_price %><br></p>
 <% end %>
